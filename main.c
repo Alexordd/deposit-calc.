@@ -37,3 +37,10 @@ else {
 	s=v*1.15;
     }}
 
+printf("deposit amount after %d days:%d",d,s);
+
+return 0;
+}
+
+
+
