@@ -2,7 +2,7 @@ CC=gcc
 CFLAGS=-Wall -Werror
 TEST_FLAGS=-I thirdparty -Wall -Werror
 EXECUTABLE=bin/prog_out
-TEST_EXECUTABLE=bin/test
+TESTEX=bin/test
 
 SRC_BUILD_DIR=build/
 SRC_DIR=src/
@@ -29,7 +29,7 @@ mktest:
 	mkdir -p bin build/test test-compile
 
 test-compile: $(TEST_OBJ_DIR)/main.o $(TEST_OBJ_DIR)/deposit_test.o $(TEST_OBJ_DIR)/validation_test.o $(SRC_BUILD_DIR)/deposit.o
-	$(CC) $(TEST_OBJ_DIR)/main.o $(TEST_OBJ_DIR)/deposit_test.o $(TEST_OBJ_DIR)/validation_test.o $(SRC_BUILD_DIR)/deposit.o 
+	$(CC) $(TEST_OBJ_DIR)/main.o $(TEST_OBJ_DIR)/deposit_test.o $(TEST_OBJ_DIR)/validation_test.o $(SRC_BUILD_DIR)/deposit.o -o $(TESTEX)
 
 $(TEST_OBJ_DIR)/main.o: $(SRC_TEST_DIR)/main.c
 	$(CC) $(TEST_FLAGS) -c $(SRC_TEST_DIR)/main.c -o $(TEST_OBJ_DIR)/main.o
