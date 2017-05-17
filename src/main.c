@@ -4,18 +4,19 @@
 
 int main()
 {
-int d=0,v=0;
+int d=0,v=0,k=1;
 float s=0;
 
-printf("Enter the deposit amount(thousand of rubles):");
-scanf("%d",&v);
-
-printf("Enter the term(days):");
-scanf("%d",&d);
-
-Error(d,v);
-Count(d,v,s);
-
+while(k==1){
+	printf("Enter the deposit amount(thousand of rubles):");
+	scanf("%d",&v);
+	printf("Enter the term(days):");
+	scanf("%d",&d);
+	k=Error(d,v);
+}
+	
+s=Count(d,v,s);
+printf("Deposit amount: %f",s);
 return 0;
 }
 

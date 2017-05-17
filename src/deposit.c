@@ -2,20 +2,21 @@
 #include <stdlib.h>
 #include "deposit.h"
 
-void Error(int d,int v)
+int Error(int d,int v)
 {
     if(d>365){
 	printf("ERROR:Term deposit-no more than 365 days!");
-	main();
+	return 1;
 	}
     if(d<0){
 	printf("ERROR:Term deposit can't be less than one day!");
-	main();
+	return 1;
 	}
     if(v<10){
 	printf("ERROR:Minimum deposit amount-10 thousand rubles!");
-	main();
+	return 1;
 	}
+return 0;
 }
 
 float Count(int d,int v,float s)
@@ -47,9 +48,7 @@ float Count(int d,int v,float s)
 	    s=v*1.15;
 	}}
 
-    printf("deposit amount after %.3f days:%d",s,d);
-    printf("\n");
-    return 0;
+    return s;
 }
 
 
