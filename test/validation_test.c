@@ -32,6 +32,6 @@ CTEST(InputValidation, amountLessZeroFail)
 CTEST(InputValidation, durationAndAmountRangeTestPass)
 {
     const int result = Error(30, 1000);
-    const int expected = 1;
+    const int expected = 0;
     ASSERT_EQUAL(expected, result);
 }

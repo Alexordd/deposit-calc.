@@ -38,20 +38,20 @@
  
  CTEST(MoreBlockTests, goodDataPass108)
  {
-     const int result = Count(0,210, 300);
+     const int result = Count(300,210,0);
      const int expected = 241.500000;
      ASSERT_EQUAL(expected, result);
  }
  
  CTEST(MoreBlockTests, goodDataPass115)
  {
-     const int result = Count(0,60, 60);
+     const int result = Count(60,60,0);
      const int expected = 61.200001;
      ASSERT_EQUAL(expected, result);
  }
 CTEST(Test_Faild, Failtest01)
 {
-  const int result = Count(0,137,317);
+  const int result = Count(317,137,0);
   const int expected =0;
   ASSERT_EQUAL(expected, result);
 }
