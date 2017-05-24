@@ -4,16 +4,13 @@
 
 int Error(int d,int v)
 {
-    if(d>365){
-	printf("ERROR:Term deposit-no more than 365 days!");
+    if(d>365){	
 	return 1;
 	}
-    if(d<0){
-	printf("ERROR:Term deposit can't be less than one day!");
+    if(d<0){	
 	return 1;
 	}
-    if(v<10){
-	printf("ERROR:Minimum deposit amount-10 thousand rubles!");
+    if(v<10){	
 	return 1;
 	}
 return 0;

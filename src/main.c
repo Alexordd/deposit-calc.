@@ -13,6 +13,8 @@ while(k==1){
 	printf("Enter the term(days):");
 	scanf("%d",&d);
 	k=Error(d,v);
+	if(k==1) printf("ERROR!");
+	
 }
 	
 s=Count(d,v,s);
