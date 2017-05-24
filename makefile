@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-Wall -Werror
-TEST_FLAGS=-I thirdparty -Wall -Werror
+TEST_FLAGS=-I thirdparty -I src -Wall -Werror
 EXECUTABLE=bin/prog_out
 TESTEX=bin/test
 
