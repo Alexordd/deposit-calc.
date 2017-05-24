@@ -15,23 +15,23 @@ CTEST(InputValidation, BordersCheckPassedRight)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(InputValidation, durationLessZeroFail)
+CTEST(InputValidation, DateLessZeroFail)
 {
     const int result = Error(-5, 0);
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(InputValidation, amountLessZeroFail)
+CTEST(InputValidation, AmountLessZeroFail)
 {
     const int result = Error(5, -100);
     const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(InputValidation, durationAndAmountRangeTestPass)
+CTEST(InputValidation, DateIsLonger365)
 {
-    const int result = Error(30, 1000);
-    const int expected = 0;
+    const int result = Error(1000, 30);
+    const int expected = 1;
     ASSERT_EQUAL(expected, result);
 }
