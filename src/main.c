@@ -4,7 +4,7 @@
 
 int main()
 {
-int d=0,v=0,k=1;
+int d=0,v=0,k=1,l;
 float s=0;
 
 while(k==1){
